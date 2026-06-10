@@ -24,6 +24,7 @@ const HIGHLIGHTS_DATA = [
 export default function Highlights() {
   return (
     <section id="highlights">
+      
       <div className="container">
         <div className="row">
           <h2 className="section__title">

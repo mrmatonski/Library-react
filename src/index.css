@@ -30,8 +30,9 @@ nav {
 }
 
 img {
-  height: 100%;
-  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 p {
@@ -257,6 +258,9 @@ header {
 .header__img--wrapper {
   padding: 20px;
   min-height: 320px;
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
 
   /* Added this after the tutorial to 
   show it over the wave on larger screens */
@@ -863,8 +867,21 @@ select {
 
 /* SMALL PHONES, TABLETS, LARGE SMARTPHONES */
 @media (max-width: 768px) {
+  .nav__container,
+  .row,
+  .header__container,
+  .books,
+  .highlight__wrapper {
+    padding: 0 16px;
+  }
+
   .header__description {
-    padding: 0 24px;
+    padding: 0 16px;
+  }
+
+  .header__img--wrapper {
+    padding: 16px;
+    min-height: 280px;
   }
 
   h1 {
@@ -881,6 +898,16 @@ select {
 
   .book {
     width: 50%;
+    padding: 16px;
+  }
+
+  .books {
+    margin: 0 -16px;
+  }
+
+  .highlight {
+    width: 50%;
+    padding: 0 16px;
   }
 
   .book__selected {
@@ -889,6 +916,7 @@ select {
   .book__selected--figure {
     width: 100%;
     justify-content: flex-start;
+    padding: 0 16px;
   }
   .book__selected--description {
     width: 100%;
@@ -902,16 +930,57 @@ select {
     display: block;
   }
 
+  .nav__container,
+  .row,
+  .books,
+  .highlight__wrapper,
+  .header__container {
+    padding: 0 12px;
+  }
+
   .nav__list {
     display: none;
   }
 
+  .header {
+    height: auto;
+  }
+
+  .header__container {
+    justify-content: center;
+  }
+
+  .header__img--wrapper {
+    padding: 12px;
+    min-height: 240px;
+  }
+
+  .header__description {
+    padding: 0 12px;
+    align-items: center;
+  }
+
   .highlight {
     width: 100%;
+    padding: 0 12px;
   }
 
   .highlight:not(:last-child) {
     margin-bottom: 24px;
+  }
+
+  .book {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .books {
+    margin: 0 -12px;
+  }
+
+  .book__selected--figure {
+    padding: 0;
+    min-height: auto;
   }
 
   .cart__book--img {
